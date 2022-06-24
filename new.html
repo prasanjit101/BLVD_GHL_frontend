@@ -1,78 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Untitled</title>
+    <title>Dashboard - Brand</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/new.css">
 </head>
 
 <body class="bg-gradient-primary">
-    <div class="m-3">
-        <div class="container pb-3">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h4 class="card-title">Actions</h4>
-                            <h6 class="text-muted card-subtitle mb-2">Add your actions</h6>
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio,
-                                dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
-                                metus.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4 text-center"><button class="btn btn-primary" type="button">ADD</button></div>
-                <div class="col-md-4"></div>
-            </div>
+    <div class="container ">
+        <div id="empty" class="visually-hidden">
+            <button type="button" class="btn btn-primary">Create new</button>
         </div>
-        <div class="container pb-3">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h4 class="card-title">EMAIL</h4>
-                            <h6 class="text-muted card-subtitle mb-2">Add your email template</h6>
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio,
-                                dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
-                                metus.</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="p-5 bg-gradient-primary" id="filled ">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Name</span>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                    aria-describedby="basic-addon1">
             </div>
-            <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4 text-center"><button class="btn btn-primary" type="button">ADD</button></div>
-                <div class="col-md-4"></div>
+            <div class="input-group mb-3">
+                <select class="form-select" id="inputGroupSelect02">
+                    <option selected>Choose...</option>
+                    <option value="1">Appointment created</option>
+                    <option value="2">Appointment Cancelled</option>
+                </select>
+                <label class="input-group-text" for="inputGroupSelect02">Actions</label>
             </div>
-        </div>
-        <div class="container pb-3">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h4 class="card-title">SMS</h4>
-                            <h6 class="text-muted card-subtitle mb-2">Add your SMS template</h6>
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio,
-                                dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
-                                metus.</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="input-group mt-2">
+                <span class="input-group-text pe-2">Email Template</span>
+                <textarea class="form-control" aria-label="With textarea"></textarea>
             </div>
-            <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4 text-center"><button class="btn btn-primary" type="button">ADD</button></div>
-                <div class="col-md-4"></div>
+            <div class="input-group mt-2">
+                <span class="input-group-text pe-3">SMS Template</span>
+                <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+            <div class="d-flex mt-3">
+                <button class="btn btn-primary text-light me-2 ">
+                    Save as Draft
+                </button><button class="btn btn-primary text-light ">
+                    Publish
+                </button>
             </div>
         </div>
     </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/theme.js"></script>
 </body>
 
 </html>

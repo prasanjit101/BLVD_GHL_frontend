@@ -1,0 +1,19 @@
+/* import css*/
+@import "./styles.css";
+
+
+body {
+    color: black !important;
+}
+
+a {
+    font-family: Blvd Pro Mono, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: left;
+    color: white;
+}
+
+a:hover {
+    color: rgb(214, 214, 214);
+}
