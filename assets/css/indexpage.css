@@ -16,6 +16,15 @@ body {
     text-align: center;
 }
 
+.ct {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    text-align: center;
+}
+
 .btns {
     background-color: var(--accent);
     color: black;
