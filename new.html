@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Dashboard - Brand</title>
+    <title>New Workflows</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
@@ -12,42 +12,74 @@
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="assets/css/new.css">
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <script>
+        tinymce.init({
+            selector: '#email_template',
+            plugins: [
+                'a11ychecker', 'advlist', 'advcode', 'advtable', 'autolink', 'checklist', 'export',
+                'lists', 'link', 'image', 'charmap', 'preview', 'anchor', 'searchreplace', 'visualblocks',
+                'powerpaste', 'fullscreen', 'formatpainter', 'insertdatetime', 'media', 'table', 'help', 'wordcount'
+            ],
+            toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
+                'alignleft aligncenter alignright alignjustify | ' +
+                'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
+        });
+        tinymce.init({
+            selector: '#sms_template',
+            plugins: [
+                'a11ychecker', 'advlist', 'advcode', 'advtable', 'autolink', 'checklist', 'export',
+                'lists', 'link', 'image', 'charmap', 'preview', 'anchor', 'searchreplace', 'visualblocks',
+                'powerpaste', 'fullscreen', 'formatpainter', 'insertdatetime', 'media', 'table', 'help', 'wordcount'
+            ],
+            toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
+                'alignleft aligncenter alignright alignjustify | ' +
+                'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
+        });
+    </script>
 </head>
 
 <body class="bg-gradient-primary">
     <div class="container ">
-        <div id="empty" class="visually-hidden">
-            <button type="button" class="btn btn-primary">Create new</button>
-        </div>
         <div class="p-5 bg-gradient-primary" id="filled ">
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">Name</span>
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                    aria-describedby="basic-addon1">
-            </div>
-            <div class="input-group mb-3">
-                <select class="form-select" id="inputGroupSelect02">
-                    <option selected>Choose...</option>
-                    <option value="1">Appointment created</option>
-                    <option value="2">Appointment Cancelled</option>
-                </select>
-                <label class="input-group-text" for="inputGroupSelect02">Actions</label>
-            </div>
-            <div class="input-group mt-2">
-                <span class="input-group-text pe-2">Email Template</span>
-                <textarea class="form-control" aria-label="With textarea"></textarea>
-            </div>
-            <div class="input-group mt-2">
-                <span class="input-group-text pe-3">SMS Template</span>
-                <textarea class="form-control" aria-label="With textarea"></textarea>
-            </div>
-            <div class="d-flex mt-3">
-                <button class="btn btn-primary text-light me-2 ">
-                    Save as Draft
-                </button><button class="btn btn-primary text-light ">
-                    Publish
-                </button>
-            </div>
+            <h4 class="text-middle text-light my-4">Workflow Builder</h4>
+            <form id="workflow-form" class="mt-5">
+                <div class="input-group mt-4 mb-3" style="max-width: 1176px;">
+                    <!-- Input workflow name -->
+                    <span class="input-group-text" id="basic-addon1">Name</span>
+                    <input style="max-width: 999px;" type="text" class="form-control" placeholder="Workflow Name"
+                        aria-label="Username" aria-describedby="basic-addon1" id="create_name" required>
+                </div>
+                <div class="input-group mb-3" style="max-width: 1176px;">
+                    <!-- You can also set this input as radio buttons -->
+                    <!-- <input class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input"> -->
+                    <select style="max-width: 987px;" class="form-select" id="create_action">
+                        <option selected>Choose Action...</option>
+                        <option value="1">Appointment created</option>
+                        <option value="2">Appointment Cancelled</option>
+                    </select>
+                    <label class="input-group-text" for="create_action">Actions</label>
+                </div>
+                <div class="input-group mt-2">
+                    <span class="input-group-text  pe-3" style="width:143px ;">Email Template</span>
+                    <textarea class="form-control" form="workflow-form" aria-label="With textarea"
+                        id="email_template"></textarea>
+                </div>
+                <div class="input-group mt-2">
+                    <span class="input-group-text pe-3" style="width:143px ;">SMS Template</span>
+                    <textarea class="form-control" form="workflow-form" aria-label="With textarea"
+                        id="sms_template"></textarea>
+                </div>
+                <div class="d-flex mt-3">
+                    <button class="btn btn-primary text-light me-2 " id="btn-draft">
+                        Save as Draft
+                    </button>
+                    <button class="btn btn-primary text-light " id="btn-publish">
+                        Publish
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>

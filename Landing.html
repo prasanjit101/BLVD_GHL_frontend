@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Workflow</title>
+    <title>Create/List workflows </title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="assets/css/indexpage.css">
+    <link rel="stylesheet" href="assets/css/landing.css">
 </head>
 
 <body>
@@ -19,10 +20,14 @@
         <div class="row">
             <div class="col-md-6 ct">
                 <h1>Create Workflows</h1>
-                <button class="btns mt-5" style="width:203px ;" type="button"><a href="/ghl">Create new
+                <button type="button" class="btns text-light bg-dark" data-bs-toggle="modal" data-bs-target="#blvdcred"
+                    data-bs-whatever="@mdo">
+                    set BLVD credentials
+                </button>
+                <button class="btns mt-5" style="width:203px ;" type="button"><a href="/new.html">Create new
                         workflow</a></button>
                 <br>
-                <button class="btns mt-3" style="width:203px ;" type="button"><a href="/ghl">Existing
+                <button class="btns mt-3" style="width:203px ;" type="button"><a href="/existing.html">Existing
                         workflows</a></button>
             </div>
             <div class="col-md-6">
@@ -34,6 +39,81 @@
             </div>
         </div>
     </div>
+    <!-- modal -->
+    <div class="modal fade" id="blvdcred" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content ">
+                <div class="modal-header bg-gradient-primary text-light">
+                    <h4 class="modal-title text-center text-light w-100 font-weight-bold">
+                        Enter your credentials
+                    </h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body mx-3">
+                    <!-- Credentials Form -->
+                    <form id="credential-form">
+                        <!-- blvd_api -->
+                        <div class="mb-3 row">
+                            <label for="blvd_api" class="col-sm-3 col-form-label">BLVD API key</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="blvd_api" required>
+                            </div>
+                        </div>
+                        <!-- blvd location -->
+                        <div class="mb-3 row">
+                            <label for="blvd_location" class="col-sm-3 col-form-label">BLVD location</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="blvd_location" required>
+                            </div>
+                        </div>
+                        <!-- blvd secret -->
+                        <div class="mb-3 row">
+                            <label for="blvd_secret" class="col-sm-3 col-form-label">BLVD secret</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="blvd_secret" required>
+                            </div>
+                        </div>
+                        <!-- blvd business id -->
+                        <div class="mb-3 row">
+                            <label for="blvd_bussiness_id" class="col-sm-3 col-form-label">BLVD business id</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="blvd_bussiness_id" required>
+                            </div>
+                        </div>
+                        <!-- ghl v1 token -->
+                        <div class="mb-3 row">
+                            <label for="v1tk" class="col-sm-3 col-form-label">GHL V1 token</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="v1tk" required>
+                            </div>
+                        </div>
+                        <!-- ghl calendar id -->
+                        <div class="mb-3 row">
+                            <label for="calendar_id" class="col-sm-3 col-form-label">GHL calendar ID</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="calendar_id" required>
+                            </div>
+                        </div>
+                        <!-- sender_email_address -->
+                        <div class="mb-3 row">
+                            <label for="sender_email_address" class="col-sm-3 col-form-label">Sender's email
+                                address</label>
+                            <div class="col-sm-9">
+                                <input type="email" class="form-control" id="sender_email_address" required>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" value="submit" form="credential-form"
+                        class="btn btn-primary">Add/Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/landing.js"></script>
 </body>
 
 </html>

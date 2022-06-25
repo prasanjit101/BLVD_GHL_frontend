@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Dashboard - Brand</title>
+    <title>Workflows List</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
@@ -14,60 +14,75 @@
     <link rel="stylesheet" href="assets/css/existing.css">
 </head>
 
-<body id="existing ">
+<body id="">
     <div class="container-fluid bg-gradient-primary">
         <div class="row ">
-            <div class="col-md-2 p-5 position-fixed " style="height: 100vh;">
-                <a href="#existing">Existing</a>
+            <div id="sidebar" class="col-md-2 p-5 position-fixed " style="height: 100vh;">
+                <a href="#active">ACTIVE</a>
                 <br>
-                <a href="#drafts">Drafts</a>
+                <a href="#inactive">INACTIVE</a>
             </div>
-            <div class="col-md-10 ps-2" style="margin-left: 250px;">
-                <h5 class="mt-5 ml-3 text-light">NAME</h5>
-                <div id="existing" class="col-md-12 mt-4 mb-5">
+            <div class="col-md-9 right ps-2">
+                <h5 class="mt-5 ml-3 text-light">ACTIVE</h5>
+                <div id="active" class="col-md-12 mt-4 mb-5">
+                    <!-- This section lists the active workflows, one for each action type -->
+                    <!-- example of card, content may vary.Can be used with for loops to make a list-->
                     <div class="card my-1 shadow">
-                        <div class="card-header">
-                            Action
+                        <div id="workflow_name" class="card-header">
+                            Name1
                         </div>
                         <div class="card-body">
-                            <p class="card-text">content.
-                            </p>
-                            <a href="#" class="btn btn-primary text-light">select</a>
+                            <!-- for action -->
+                            <p id="workflow_action" class="card-text">Appointment Created</p>
+                            <!-- for date time it was created -->
+                            <p class="text-muted mb-3">Set at : <span id="workflow_setat">Date time</span></p>
+                            <!-- it will be fixed for this section -->
+                            <div class="badge rounded-pill bg-success mb-1">
+                                Active
+                            </div>
+                            <br>
+                            <a href="/new.html?id=name1" class="btn btn-primary text-light">select</a>
                         </div>
                     </div>
                     <div class="card my-1 shadow">
-                        <div class="card-header">
-                            Action
+                        <div id="workflow_name" class="card-header">
+                            Name6
                         </div>
                         <div class="card-body">
-                            <p class="card-text">content.
-                            </p>
-                            <a href="#" class="btn btn-primary text-light">select</a>
+                            <!-- for action -->
+                            <p id="workflow_action" class="card-text">Appointment Cancelled</p>
+                            <!-- for date time it was created -->
+                            <p class="text-muted mb-3">Set at : <span id="workflow_setat">Date time</span></p>
+                            <!-- it will be fixed for this section -->
+                            <div class="badge rounded-pill bg-success mb-1">
+                                Active
+                            </div>
+                            <br>
+                            <a href="/new.html?id=name6" class="btn btn-primary text-light">select</a>
                         </div>
                     </div>
-
                 </div>
                 <hr>
-                <h5 class="mt-5 ml-3 text-light">DRAFTS</h5>
-                <div id="drafts" class="col-md-12 mt-4 mb-5">
+                <!-- inactive -->
+                <h5 class="mt-5 ml-3 text-light">INACTIVE</h5>
+                <div id="inactive" class="col-md-12 mt-4 mb-5">
+                    <!-- This section lists the inactive workflows, one for each action type -->
+                    <!-- example of card, content may vary. Can be used with for loops to make a list-->
                     <div class="card my-1 shadow">
-                        <div class="card-header">
-                            Action
+                        <div id="workflow_name" class="card-header">
+                            Name3
                         </div>
                         <div class="card-body">
-                            <p class="card-text">content.
-                            </p>
-                            <a href="#" class="btn btn-primary text-light">select</a>
-                        </div>
-                    </div>
-                    <div class="card my-1 shadow">
-                        <div class="card-header">
-                            Action
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">content.
-                            </p>
-                            <a href="#" class="btn btn-primary text-light">select</a>
+                            <!-- for action -->
+                            <p id="workflow_action" class="card-text">Appointment Created</p>
+                            <!-- for date time it was created -->
+                            <p class="text-muted mb-3">Set at : <span id="workflow_setat">Date time</span></p>
+                            <!-- it will be fixed for this section -->
+                            <div class="badge rounded-pill bg-danger mb-1">
+                                Inactive
+                            </div>
+                            <br>
+                            <a href="/new.html?id=name3" class="btn btn-primary text-light">select</a>
                         </div>
                     </div>
                 </div>

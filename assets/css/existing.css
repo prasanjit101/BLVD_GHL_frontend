@@ -14,6 +14,25 @@ a {
     color: white;
 }
 
+p {
+    margin-bottom: 5px;
+}
+
 a:hover {
     color: rgb(214, 214, 214);
+}
+
+.right {
+    margin-left: 250px;
+}
+
+@media(max-width: 500px) {
+    #sidebar {
+        display: none;
+    }
+
+    .right {
+        margin-left: 0;
+    }
+
 }
