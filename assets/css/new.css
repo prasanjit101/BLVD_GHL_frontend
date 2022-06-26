@@ -1,7 +1,33 @@
 /* import css*/
 @import "./styles.css";
 
-textarea {
+#Created textarea {
     resize: vertical;
     min-height: 235px !important;
+}
+
+#Cancelled textarea {
+    resize: vertical;
+    min-height: 135px !important;
+    width: 450px;
+}
+
+#Cancelled {
+    display: none;
+}
+
+#myTab {
+    width: 990px;
+}
+
+.tabtext {
+    color: white;
+}
+
+.tabtext:active {
+    color: black;
+}
+
+.tabtext:hover {
+    color: white;
 }
