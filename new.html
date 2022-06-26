@@ -12,202 +12,94 @@
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="assets/css/new.css">
-    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.tiny.cloud/1/si3attca1u3kry5evhyi2g9rsyjit7zrd1cuz0pdlgllan7x/tinymce/6/tinymce.min.js"
+        referrerpolicy="origin"></script>
 
-    <script>
-        tinymce.init({
-            selector: '#email_template',
-            plugins: [
-                'a11ychecker', 'advlist', 'advcode', 'advtable', 'autolink', 'checklist', 'export',
-                'lists', 'link', 'image', 'charmap', 'preview', 'anchor', 'searchreplace', 'visualblocks',
-                'powerpaste', 'fullscreen', 'formatpainter', 'insertdatetime', 'media', 'table', 'help', 'wordcount'
-            ],
-            toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
-                'alignleft aligncenter alignright alignjustify | ' +
-                'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
-        });
-        tinymce.init({
-            selector: '#sms_template',
-            plugins: [
-                'a11ychecker', 'advlist', 'advcode', 'advtable', 'autolink', 'checklist', 'export',
-                'lists', 'link', 'image', 'charmap', 'preview', 'anchor', 'searchreplace', 'visualblocks',
-                'powerpaste', 'fullscreen', 'formatpainter', 'insertdatetime', 'media', 'table', 'help', 'wordcount'
-            ],
-            toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
-                'alignleft aligncenter alignright alignjustify | ' +
-                'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
-        });
-        tinymce.init({
-            selector: '#cancel_email_template',
-            plugins: [
-                'a11ychecker', 'advlist', 'advcode', 'advtable', 'autolink', 'checklist', 'export',
-                'lists', 'link', 'image', 'charmap', 'preview', 'anchor', 'searchreplace', 'visualblocks',
-                'powerpaste', 'fullscreen', 'formatpainter', 'insertdatetime', 'media', 'table', 'help', 'wordcount'
-            ],
-            toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
-                'alignleft aligncenter alignright alignjustify | ' +
-                'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
-        });
-        tinymce.init({
-            selector: '#cancel_sms_template',
-            plugins: [
-                'a11ychecker', 'advlist', 'advcode', 'advtable', 'autolink', 'checklist', 'export',
-                'lists', 'link', 'image', 'charmap', 'preview', 'anchor', 'searchreplace', 'visualblocks',
-                'powerpaste', 'fullscreen', 'formatpainter', 'insertdatetime', 'media', 'table', 'help', 'wordcount'
-            ],
-            toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
-                'alignleft aligncenter alignright alignjustify | ' +
-                'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
-        });
-        tinymce.init({
-            selector: '#no_show_email_template',
-            plugins: [
-                'a11ychecker', 'advlist', 'advcode', 'advtable', 'autolink', 'checklist', 'export',
-                'lists', 'link', 'image', 'charmap', 'preview', 'anchor', 'searchreplace', 'visualblocks',
-                'powerpaste', 'fullscreen', 'formatpainter', 'insertdatetime', 'media', 'table', 'help', 'wordcount'
-            ],
-            toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
-                'alignleft aligncenter alignright alignjustify | ' +
-                'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
-        });
-        tinymce.init({
-            selector: '#no_show_sms_template',
-            plugins: [
-                'a11ychecker', 'advlist', 'advcode', 'advtable', 'autolink', 'checklist', 'export',
-                'lists', 'link', 'image', 'charmap', 'preview', 'anchor', 'searchreplace', 'visualblocks',
-                'powerpaste', 'fullscreen', 'formatpainter', 'insertdatetime', 'media', 'table', 'help', 'wordcount'
-            ],
-            toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
-                'alignleft aligncenter alignright alignjustify | ' +
-                'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
-        });
-        tinymce.init({
-            selector: '#client_late_email_template',
-            plugins: [
-                'a11ychecker', 'advlist', 'advcode', 'advtable', 'autolink', 'checklist', 'export',
-                'lists', 'link', 'image', 'charmap', 'preview', 'anchor', 'searchreplace', 'visualblocks',
-                'powerpaste', 'fullscreen', 'formatpainter', 'insertdatetime', 'media', 'table', 'help', 'wordcount'
-            ],
-            toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
-                'alignleft aligncenter alignright alignjustify | ' +
-                'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
-        });
-        tinymce.init({
-            selector: '#client_late_sms_template',
-            plugins: [
-                'a11ychecker', 'advlist', 'advcode', 'advtable', 'autolink', 'checklist', 'export',
-                'lists', 'link', 'image', 'charmap', 'preview', 'anchor', 'searchreplace', 'visualblocks',
-                'powerpaste', 'fullscreen', 'formatpainter', 'insertdatetime', 'media', 'table', 'help', 'wordcount'
-            ],
-            toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
-                'alignleft aligncenter alignright alignjustify | ' +
-                'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
-        });
-    </script>
+    <script src="assets/js/tiny-initaliser.js"></script>
 </head>
 
 <body class="bg-gradient-primary">
     <div class="container ">
         <div class="p-5 bg-gradient-primary" id="filled ">
             <h4 class="text-middle text-light my-4">Workflow Builder</h4>
-            <form id="workflow-form" class="mt-5">
+            <form id="workflow-form" name="workflow-form" method="post" class="mt-5">
                 <div class="input-group mt-4 mb-3" style="max-width: 1176px;">
-                    <span class="input-group-text" id="basic-addon1">Name</span>
                     <!-- Input workflow name -->
+                    <span class="input-group-text" id="basic-addon1">Name</span>
                     <input style="max-width: 999px;" type="text" class="form-control" placeholder="Workflow Name"
-                        aria-label="Username" aria-describedby="basic-addon1" id="create_name" required>
+                        aria-label="Username" name="create_name" aria-describedby="basic-addon1" id="create_name"
+                        required>
                 </div>
                 <div class="input-group mb-3" style="max-width: 1176px;">
                     <!-- You can also set this input as radio buttons -->
                     <!-- <input class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input"> -->
-                    <select style="max-width: 987px;" class="form-select" id="create_action" onchange="onSelect(this)">
+                    <select style="max-width: 987px;" class="form-select" id="create_action" name="create_action"
+                        onchange="onSelect(this)">
                         <option selected>Choose Action...</option>
-                        <option value="1">Appointment created</option>
-                        <option value="2">Appointment Cancelled</option>
+                        <option value="on_create" name="created">Appointment Created</option>
+                        <option value="on_cancel" name="cancelled">Appointment Cancelled</option>
+                        <option value="on_reschedule" name="rescheduled">Appointment Rescheduled</option>
                     </select>
-                    <label class="input-group-text" for="create_action">Actions</label>
+                    <label class="input-group-text" for="create_action" name="create_action">Actions</label>
                 </div>
                 <!-- On created it will be shown otherwise not -->
                 <div id="Created">
                     <div class="input-group mt-2">
                         <span class="input-group-text  pe-3" style="width:143px ;">Email Template</span>
                         <textarea class="form-control" form="workflow-form" aria-label="With textarea"
-                            id="email_template"></textarea>
+                            id="email_template" name="email_template"></textarea>
                     </div>
                     <div class="input-group mt-2">
                         <span class="input-group-text pe-3" style="width:143px ;">SMS Template</span>
-                        <textarea class="form-control" form="workflow-form" aria-label="With textarea"
-                            id="sms_template"></textarea>
+                        <textarea class="form-control" form="workflow-form" aria-label="With textarea" id="sms_template"
+                            name="sms_template"></textarea>
                     </div>
                 </div>
                 <!-- On Cancelled -->
                 <div id="Cancelled">
-                    <!-- on client cancel, on no show, on client late -->
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="tabtext nav-link active" id="on-client-cancel" data-bs-toggle="tab"
-                                data-bs-target="#client-cancel" type="button" role="tab" aria-controls="home"
-                                aria-selected="true">On Client Cancellation</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="tabtext nav-link" id="on-no-show" data-bs-toggle="tab"
-                                data-bs-target="#no-show" type="button" role="tab" aria-controls="profile"
-                                aria-selected="false">On no show
-                                up</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="tabtext nav-link" id="on-client-late" data-bs-toggle="tab"
-                                data-bs-target="#client-late" type="button" role="tab" aria-controls="contact"
-                                aria-selected="false">On client late</button>
-                        </li>
-                    </ul>
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="client-cancel" role="tabpanel">
-                            <!-- on client cancel -->
-                            <div class="input-group mt-2">
-                                <span class="input-group-text pe-3" style="width:143px ;">Email Template</span>
-                                <textarea class="form-control" form="workflow-form" aria-label="With textarea"
-                                    id="cancel_email_template"></textarea>
-                            </div>
-                            <div class="input-group mt-2">
-                                <span class="input-group-text pe-3" style="width:143px ;">SMS Template</span>
-                                <textarea class="form-control" form="workflow-form" aria-label="With textarea"
-                                    id="cancel_sms_template"></textarea>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="no-show" role="tabpanel">
-                            <!-- on no show -->
-                            <div class="input-group mt-2">
-                                <span class="input-group-text pe-3" style="width:143px ;">Email Template</span>
-                                <textarea class="form-control" form="workflow-form" aria-label="With textarea"
-                                    id="no_show_email_template"></textarea>
-                            </div>
-                            <div class="input-group mt-2">
-                                <span class="input-group-text pe-3" style="width:143px ;">SMS Template</span>
-                                <textarea class="form-control" form="workflow-form" aria-label="With textarea"
-                                    id="no_show_sms_template"></textarea>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="client-late" role="tabpanel">
-                            <!-- on client late -->
-                            <div class="input-group mt-2">
-                                <span class="input-group-text pe-3" style="width:143px ;">Email Template</span>
-                                <textarea class="form-control" form="workflow-form" aria-label="With textarea"
-                                    id="client_late_email_template"></textarea>
-                            </div>
-                            <div class="input-group mt-2">
-                                <span class="input-group-text pe-3" style="width:143px ;">SMS Template</span>
-                                <textarea class="form-control" form="workflow-form" aria-label="With textarea"
-                                    id="client_late_sms_template"></textarea>
-                            </div>
-                        </div>
+                    <!-- on client cancel -->
+                    <p class="text-light mt-3">On client Cancellation</p>
+                    <div class="input-group mt-2">
+                        <span class="input-group-text pe-3" style="width:143px ;">Email Template</span>
+                        <textarea class="form-control" form="workflow-form" aria-label="With textarea"
+                            id="cancel_email_template"></textarea>
                     </div>
+                    <div class="input-group mt-2">
+                        <span class="input-group-text pe-3" style="width:143px ;">SMS Template</span>
+                        <textarea class="form-control" form="workflow-form" aria-label="With textarea"
+                            id="cancel_sms_template"></textarea>
+                    </div>
+                    <!-- on no show -->
+                    <p class="text-light mt-3">On no show</p>
+                    <div class="input-group mt-2">
+                        <span class="input-group-text pe-3" style="width:143px ;">Email Template</span>
+                        <textarea class="form-control" form="workflow-form" aria-label="With textarea"
+                            id="no_show_email_template"></textarea>
+                    </div>
+                    <div class="input-group mt-2">
+                        <span class="input-group-text pe-3" style="width:143px ;">SMS Template</span>
+                        <textarea class="form-control" form="workflow-form" aria-label="With textarea"
+                            id="no_show_sms_template"></textarea>
+                    </div>
+                    <!-- on client late -->
+                    <p class="text-light mt-3">On client late</p>
+                    <div class="input-group mt-2">
+                        <span class="input-group-text pe-3" style="width:143px ;">Email Template</span>
+                        <textarea class="form-control" form="workflow-form" aria-label="With textarea"
+                            id="client_late_email_template"></textarea>
+                    </div>
+                    <div class="input-group mt-2">
+                        <span class="input-group-text pe-3" style="width:143px ;">SMS Template</span>
+                        <textarea class="form-control" form="workflow-form" aria-label="With textarea"
+                            id="client_late_sms_template"></textarea>
+                    </div>
+
                 </div>
                 <div class="d-flex mt-3">
-                    <button class="btn btn-primary text-light me-2 " id="btn-draft">
+                    <button class="btn btn-primary text-light me-2 " id="btn-draft" onclick="return CreateDraft();">
                         Save as Draft
                     </button>
-                    <button class="btn btn-primary text-light " id="btn-publish">
+                    <button class="btn btn-primary text-light" id="btn-publish" onclick="return CreatePublished();">
                         Publish
                     </button>
                 </div>
@@ -217,6 +109,21 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/new.js"></script>
+    <script type=text/javascript>
+        function CreatePublished() {
+          var workflowName = document.getElementById("create_name").value;
+          document.getElementById('workflow-form').action = `/create/publish/${workflowName}`;
+          //document.getElementById('workflow-form').method  = "post";    
+        }
+
+        function CreateDraft() {
+          var workflowName = document.getElementById("create_name").value;
+          document.getElementById('workflow-form').action = `/create/draft/${workflowName}`;
+          //document.getElementById('workflow-form').method  = "post";    
+        }
+
+        </script>
+
 </body>
 
 </html>
