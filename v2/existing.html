@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Workflows List</title>
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="./assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="./assets/css/existing.css">
+</head>
+
+<body id="">
+
+    <div class="container-fluid m-0 p-0 dark ">
+        <div class="row ">
+            <div id="sidebar" class="d-flex flex-column flex-shrink-0 p-3 text-white dark" style="width: 280px;">
+                <a href="/" class="d-flex align-items-center mb-2 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32">
+                        <use xlink:href=""></use>
+                    </svg>
+                    <span class="fs-4 sc">Home</span>
+                </a>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a href="#active" class="nav-link side-link active" aria-current="page">
+                            <svg class="bi me-2" width="16" height="16">
+                                <use xlink:href="#active"></use>
+                            </svg>
+                            Active workflows
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#inactive" class="nav-link side-link mt-1 text-white">
+                            <svg class="bi me-2" width="16" height="16">
+                                <use xlink:href="#inactive"></use>
+                            </svg>
+                            Inactive workflows
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+            <div id="right" class="col-md-9 right ps-2">
+                <h3>{{ message }}</h3>
+                <h5 class="mt-5 ml-3 text-light">ACTIVE WORKFLOWS</h5>
+                <div id="active" class="col-md-12 mt-4 mb-5">
+                    <!-- This section lists the active workflows, one for each action type -->
+                    <!-- example of card, content may vary.Can be used with for loops to make a list-->
+                    {% for i in workflows_pub %}
+                    <div class="card p-4 my-1 shadow">
+                        <div id="workflow_name" class=" ms-3 text-dark fw-bold">
+                            {{ i['name'] }}
+                        </div>
+                        <div class="card-body">
+                            <!-- for action -->
+                            {% if 'on_create' in i['data'].keys() %}
+                            <p id="workflow_action" class="text-dark">Appointment Created</p>
+                            {% endif %}
+
+                            {% if 'on_cancel' in i['data'].keys() %}
+                            <p id="workflow_action" class="text-dark">Appointment Cancelled</p>
+                            {% endif %}
+
+                            {% if 'on_reschedule' in i['data'].keys() %}
+                            <p id="workflow_action" class="text-dark">Appointment Rescheduled</p>
+                            {% endif %}
+
+
+                            <!-- for date time it was created -->
+                            <p class="text-muted mb-3">Set at :<span id="workflow_setat"> {{ i['data']['set_on'] }}
+                                </span></p>
+                            <!-- it will be fixed for this section -->
+                            <div class="badge rounded-pill bg-success mb-1">
+                                Active
+                            </div>
+                            <br>
+                            <a href="/editworkflow/published/{{ i['name'] }}" class="btn btns text-light">select</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+
+
+                </div>
+                <hr>
+                <!-- inactive -->
+                <h5 class="mt-5 ml-3 text-light">INACTIVE WORKFLOWS</h5>
+
+
+                <div id="inactive" class="col-md-12 mt-4 mb-5">
+                    <!-- This section lists the inactive workflows, one for each action type -->
+                    <!-- example of card, content may vary. Can be used with for loops to make a list-->
+
+                    {% for i in workflows_draft %}
+                    <div class="card my-1 shadow">
+                        <div id="workflow_name" class="card-header">
+                            {{ i['name'] }}
+                        </div>
+                        <div class="card-body">
+                            <!-- for action -->
+                            {% if 'on_create' in i['data'].keys() %}
+                            <p id="workflow_action" class="card-text">Appointment Created</p>
+                            {% endif %}
+
+                            {% if 'on_cancel' in i['data'].keys() %}
+                            <p id="workflow_action" class="card-text">Appointment Cancelled</p>
+                            {% endif %}
+
+                            {% if 'on_reschedule' in i['data'].keys() %}
+                            <p id="workflow_action" class="card-text">Appointment Rescheduled</p>
+                            {% endif %}
+
+
+                            <!-- for date time it was created -->
+                            <p class="text-muted mb-3">Set at :<span id="workflow_setat"> {{ i['data']['set_on'] }}
+                                </span></p>
+                            <!-- it will be fixed for this section -->
+                            <div class="badge rounded-pill bg-danger mb-1">
+                                Inactive
+                            </div>
+                            <br>
+                            <a href="/editworkflow/drafts/{{ i['name'] }}" class="btn btns text-light">select</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+        <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="./assets/js/theme.js"></script>
+</body>
+
+</html>

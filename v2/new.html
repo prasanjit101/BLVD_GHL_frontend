@@ -18,9 +18,9 @@
     <script src="assets/js/tiny-initaliser.js"></script>
 </head>
 
-<body class="bg-gradient-dark">
+<body class="bg-gradient-primary">
     <div class="container ">
-        <div class="p-5 bg-gradient-dark" id="filled ">
+        <div class="p-5 bg-gradient-primary" id="filled ">
             <h4 class="text-middle text-light my-4">Workflow Builder</h4>
             <form id="workflow-form" name="workflow-form" method="post" class="mt-5">
                 <div class="input-group mt-4 mb-3" style="max-width: 1176px;">
@@ -62,44 +62,44 @@
                     <div class="input-group mt-2">
                         <span class="input-group-text pe-3" style="width:143px ;">Email Template</span>
                         <textarea class="form-control" form="workflow-form" aria-label="With textarea"
-                            id="cancel_email_template"></textarea>
+                            id="on_client_cancel_email" name="on_client_cancel_email"></textarea>
                     </div>
                     <div class="input-group mt-2">
                         <span class="input-group-text pe-3" style="width:143px ;">SMS Template</span>
                         <textarea class="form-control" form="workflow-form" aria-label="With textarea"
-                            id="cancel_sms_template"></textarea>
+                            id="on_client_cancel_sms" name="on_client_cancel_sms"></textarea>
                     </div>
                     <!-- on no show -->
                     <p class="text-light mt-3">On no show</p>
                     <div class="input-group mt-2">
                         <span class="input-group-text pe-3" style="width:143px ;">Email Template</span>
                         <textarea class="form-control" form="workflow-form" aria-label="With textarea"
-                            id="no_show_email_template"></textarea>
+                            id="on_client_noshow_email" name="on_client_noshow_email"></textarea>
                     </div>
                     <div class="input-group mt-2">
                         <span class="input-group-text pe-3" style="width:143px ;">SMS Template</span>
                         <textarea class="form-control" form="workflow-form" aria-label="With textarea"
-                            id="no_show_sms_template"></textarea>
+                            id="on_client_noshow_sms" name="on_client_noshow_sms"></textarea>
                     </div>
                     <!-- on client late -->
                     <p class="text-light mt-3">On client late</p>
                     <div class="input-group mt-2">
                         <span class="input-group-text pe-3" style="width:143px ;">Email Template</span>
                         <textarea class="form-control" form="workflow-form" aria-label="With textarea"
-                            id="client_late_email_template"></textarea>
+                            id="on_client_late_email" name="on_client_late_email"></textarea>
                     </div>
                     <div class="input-group mt-2">
                         <span class="input-group-text pe-3" style="width:143px ;">SMS Template</span>
                         <textarea class="form-control" form="workflow-form" aria-label="With textarea"
-                            id="client_late_sms_template"></textarea>
+                            id="on_client_late_sms" name="on_client_late_sms"></textarea>
                     </div>
 
                 </div>
                 <div class="d-flex mt-3">
-                    <button class="btn btn-dark text-light me-2 " id="btn-draft" onclick="return CreateDraft();">
+                    <button class="btn btn-primary text-light me-2 " id="btn-draft" onclick="return CreateDraft();">
                         Save as Draft
                     </button>
-                    <button class="btn btn-dark text-light" id="btn-publish" onclick="return CreatePublished();">
+                    <button class="btn btn-primary text-light" id="btn-publish" onclick="return CreatePublished();">
                         Publish
                     </button>
                 </div>
