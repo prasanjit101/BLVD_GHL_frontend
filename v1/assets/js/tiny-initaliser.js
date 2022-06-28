@@ -23,7 +23,7 @@ tinymce.init({
 
 // for client cancellation
 tinymce.init({
-    selector: '#cancel_email_template',
+    selector: '#on_client_cancel_email',
     plugins: [
         'a11ychecker', 'advlist', 'advcode', 'advtable', 'autolink', 'checklist', 'export',
         'lists', 'link', 'image', 'charmap', 'preview', 'anchor', 'searchreplace', 'visualblocks',
@@ -34,7 +34,7 @@ tinymce.init({
         'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
 });
 tinymce.init({
-    selector: '#cancel_sms_template',
+    selector: '#on_client_cancel_sms',
     plugins: [
         'a11ychecker', 'advlist', 'advcode', 'advtable', 'autolink', 'checklist', 'export',
         'lists', 'link', 'image', 'charmap', 'preview', 'anchor', 'searchreplace', 'visualblocks',
@@ -46,7 +46,7 @@ tinymce.init({
 });
 // on no show
 tinymce.init({
-    selector: '#no_show_email_template',
+    selector: '#on_client_noshow_email',
     plugins: [
         'a11ychecker', 'advlist', 'advcode', 'advtable', 'autolink', 'checklist', 'export',
         'lists', 'link', 'image', 'charmap', 'preview', 'anchor', 'searchreplace', 'visualblocks',
@@ -57,7 +57,7 @@ tinymce.init({
         'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
 });
 tinymce.init({
-    selector: '#no_show_sms_template',
+    selector: '#on_client_noshow_sms',
     plugins: [
         'a11ychecker', 'advlist', 'advcode', 'advtable', 'autolink', 'checklist', 'export',
         'lists', 'link', 'image', 'charmap', 'preview', 'anchor', 'searchreplace', 'visualblocks',
@@ -69,7 +69,7 @@ tinymce.init({
 });
 // on client late
 tinymce.init({
-    selector: '#client_late_email_template',
+    selector: '#on_client_late_email',
     plugins: [
         'a11ychecker', 'advlist', 'advcode', 'advtable', 'autolink', 'checklist', 'export',
         'lists', 'link', 'image', 'charmap', 'preview', 'anchor', 'searchreplace', 'visualblocks',
@@ -80,7 +80,7 @@ tinymce.init({
         'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
 });
 tinymce.init({
-    selector: '#client_late_sms_template',
+    selector: '#on_client_late_sms',
     plugins: [
         'a11ychecker', 'advlist', 'advcode', 'advtable', 'autolink', 'checklist', 'export',
         'lists', 'link', 'image', 'charmap', 'preview', 'anchor', 'searchreplace', 'visualblocks',
