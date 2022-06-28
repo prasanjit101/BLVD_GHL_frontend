@@ -1,0 +1,43 @@
+@import "./styles.css";
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    font-family: Blvd Pro, sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+
+.btns {
+    background-color: var(--accent);
+    color: black;
+    padding: 13px 18px;
+
+}
+
+.cto {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    background-color: var(--primary-color);
+}
+
+a {
+    background-color: var(--accent);
+    color: #000;
+    font-family: Blvd Pro Mono, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: .1em;
+    transition: all .15s ease-in-out;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: var(--secondary-color);
+    font-size: 55px;
+    letter-spacing: .2em;
+}

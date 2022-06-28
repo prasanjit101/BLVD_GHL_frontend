@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>workflow_builder</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Navbar-Right-Links-Dark.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/bootstrap/js/collapse.js"></script>
+    <link rel="stylesheet" href="assets/css/collapse.css">
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="card-header">
+            <h5 class="text-center mb-0" contentEditable="true" name="workflow_name" id="workflow_name">Name: Create a Workflow</h5>
+        </div>
+    </div>
+    <!--Sidebar-->
+
+    <div id="sidebar_triggers">
+    
+        <div class="list">
+          <div class="item"><h6>Select your Trigger</h6></div>
+          <div class="item"><button button id="Appointment Created" name = "on_create" onClick="GFG_click(this.id)" class="btn btn-info" type="button"><p style="font-size:13px;">Appointment Created</p></button></div>
+          <div class="item"><button id="Appointment Rescheduled" name="on_reschedule" onClick="GFG_click(this.id)" class="btn btn-info" type="button"><p style="font-size:13px;">Appointment Rescheduled</p></button></div>
+          <div class="item"><button id="Appointment Cancelled: Client Cancel" name="on_client_cancel" onClick="GFG_click(this.id)" class="btn btn-info" type="button"><p style="font-size:13px;">Appointment Cancelled: Client Cancel</p></button></div>
+          <div class="item"><button id="Appointment Cancelled: Client Late Cancel" name="on_client_late_cancel" onClick="GFG_click(this.id)" class="btn btn-info" type="button"><p style="font-size:13px;">Appointment Cancelled: Client Late Cancel</p></button></div>
+          <div class="item"><button id="Appointment Cancelled: No Show" name="on_client_noshow" onClick="GFG_click(this.id)" class="btn btn-info" type="button"><p style="font-size:13px;">Appointment Cancelled: Client No Show</p></button></div>
+        </div>
+    </div>
+
+    <div id="sidebar_actions">
+    
+        <div class="list">
+          <div class="item"><h6>Select your Action</h6></div>
+          <div class="item"><button button id="SendSMS" class="btn btn-danger" type="button"><p style="font-size:13px;">SEND SMS</p></button></div>
+          <div class="item"><button button id="SendEMAIL" class="btn btn-danger" type="button"><p style="font-size:13px;">SEND EMAIL</p></button></div>
+          <div class="item"><button button id="ADDTAG" class="btn btn-danger" type="button"><p style="font-size:13px;">ADD TAG</p></button></div>
+          <div class="item"><button button id="REMOVETAG" class="btn btn-danger" type="button"><p style="font-size:13px;">REMOVE TAG</p></button></div>
+        </div>
+    </div>
+  
+
+
+     
+      
+    <div class="text-center" id="center-dv" style="margin: 79px;padding: 4px;">
+        <form name="triggerForm" id="triggerForm"> 
+        
+        <button class="btn btn-success" type="button" onclick="toggleSidebar(this)">Add A Trigger</button>
+        <br><br>Trigger: <input style = "color:rgb(16, 189, 241);" type="text" id = "GFG_DOWN" name="trigger" value="" readonly width="100%">
+        <br><br><br><br><button class="btn btn-danger" onclick="toggleSidebarActions(this)" type="button">Add Action</button><br><br><br>
+        <p id = "action_name"></p><br>
+        </form> 
+    </div>
+
+  
+
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/bootstrap/js/buttonEventsAppointment.js"></script>
+
+</body>
+
+</html>
