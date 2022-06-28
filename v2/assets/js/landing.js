@@ -23,3 +23,4 @@ document.getElementById('credential-form').addEventListener('submit', function (
     //your submit button actions here
     console.log(document.getElementById('blvd_secret').value);
 });
+

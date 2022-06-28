@@ -15,13 +15,6 @@ body {
 
 }
 
-.cto {
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-    background-color: var(--primary-color);
-}
-
 a {
     background-color: var(--accent);
     color: #000;
@@ -40,4 +33,28 @@ h1 {
     color: var(--secondary-color);
     font-size: 55px;
     letter-spacing: .2em;
+}
+
+input {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 13px;
+}
+
+button[type=submit] {
+    background-color: #000;
+    border-radius: 0;
+    padding: 9px 15px;
+    color: #d5d1d1;
+}
+
+/* modal title */
+.mt {
+    color: #000;
 }

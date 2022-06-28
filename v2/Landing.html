@@ -40,8 +40,8 @@
     <div class="modal fade" id="blvdcred" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content ">
-                <div class="modal-header bg-gradient-primary text-light">
-                    <h4 class="modal-title text-center text-light w-100 font-weight-bold">
+                <div class="modal-header">
+                    <h4 class="modal-title text-start ps-3 mt w-100">
                         Enter your credentials
                     </h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -51,75 +51,40 @@
                     <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
                     <form id="sender_details" method="POST" action="/route/blvd_business" target="dummyframe">
                         <!-- blvd_api -->
-                        <div class="mb-3 row">
-                            <label for="blvd_api" class="col-sm-3 col-form-label">BLVD API key</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" name="blvd_api_key" id="blvd_api_key" required>
-                            </div>
-                        </div>
+                        <input type="text" placeholder="Your BLVD API key" name="blvd_api_key" id="blvd_api_key"
+                            required><br>
                         <!-- blvd location -->
-                        <div class="mb-3 row">
-                            <label for="blvd_location" class="col-sm-3 col-form-label">BLVD location</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" name="blvd_location" id="blvd_location"
-                                    required>
-                            </div>
-                        </div>
+                        <input type="text" placeholder="Your BLVD location" name="blvd_location" id="blvd_location"
+                            required><br>
                         <!-- blvd secret -->
-                        <div class="mb-3 row">
-                            <label for="blvd_secret" class="col-sm-3 col-form-label">BLVD secret</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="blvd_secret_key" required>
-                            </div>
-                        </div>
+                        <input type="text" placeholder="Your BLVD secret" id="blvd_secret_key" required><br>
                         <!-- blvd business id -->
-                        <div class="mb-3 row">
-                            <label for="blvd_bussiness_id" class="col-sm-3 col-form-label">BLVD business id</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="blvd_business_id" required>
-                            </div>
-                        </div>
-
-                        <button type="submit" value="submit" class="btn btn-primary">Add/Update</button>
+                        <input type="text" placeholder="Your BLVD business id" id="blvd_business_id" required><br>
+                        <button type="submit" style="margin-left: auto;" value="submit"
+                            class="btn btn-primary">Add/Update</button>
                     </form>
-                    </form>
-
-                    <form id="ghl_details" method="POST" action="/route/ghlCalendar" target="dummyframe">
+                    <form class="mt-5" id="ghl_details" method="POST" action="/route/ghlCalendar" target="dummyframe">
                         <!-- ghl v1 token -->
-                        <div class="mb-3 row">
-                            <label for="v1tk" class="col-sm-3 col-form-label">GHL V1 token</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" name="ghl_v1" id="ghl_v1" required>
-                            </div>
-                        </div>
+                        <input type="text" class="" placeholder="GHL token" name="ghl_v1" id="ghl_v1" required><br>
                         <!-- ghl calendar id -->
-                        <div class="mb-3 row">
-                            <label for="calendar_id" class="col-sm-3 col-form-label">GHL calendar ID</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" name="calendar_id" id="calendar_id" required>
-                            </div>
-                        </div>
-
-                        <button type="submit" value="submit" class="btn btn-primary">Add/Update</button>
+                        <input type="text" class="" placeholder="GHL calendar id" name="calendar_id" id="calendar_id"
+                            required><br>
+                        <button type="submit" style="margin-left: auto;" value="submit"
+                            class="btn btn-primary">Add/Update</button>
                     </form>
 
-                    <form id="ghl_sender" method="POST" action="/route/sender" target="dummyframe"></form>
+                    <form id="ghl_sender" class="mt-5" method="POST" action="/route/sender" target="dummyframe"></form>
 
                     <!-- sender_email_address -->
-                    <div class="mb-3 row">
-                        <label for="sender_email_address" class="col-sm-3 col-form-label">Sender's email
-                            address</label>
-                        <div class="col-sm-9">
-                            <input type="email" class="form-control" id="sender_email_address" required>
-                        </div>
-                    </div>
-                    <button type="submit" value="submit" class="btn btn-primary">Add/Update</button>
+                    <input type="email" class="" placeholder="your email address" id="sender_email_address"
+                        required><br>
+                    <button type="submit" style="margin-left: auto;" value="submit"
+                        class="btn btn-primary">Add/Update</button>
                     </form>
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
