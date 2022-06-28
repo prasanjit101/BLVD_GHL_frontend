@@ -19,6 +19,11 @@ body {
     border-radius: 0 !important;
 }
 
+.side-link:hover {
+    transform: scale(1.05);
+    transition-duration: 0.5s;
+}
+
 #sidebar {
     position: fixed;
     top: 0;
@@ -38,9 +43,22 @@ body {
     width: 156px;
 }
 
+.pill {
+    border-radius: 0;
+}
+
+.card:hover {
+    transform: translate(0, -5px);
+    transition-duration: 0.5s;
+}
+
 @media (max-width: 800px) {
     #sidebar {
         display: none !important;
+    }
+
+    h5 {
+        margin-left: 24px;
     }
 
     #right {

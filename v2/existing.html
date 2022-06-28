@@ -44,7 +44,6 @@
                         </a>
                     </li>
                 </ul>
-                <hr>
             </div>
             <div id="right" class="col-md-9 right ps-2">
                 <h3>{{ message }}</h3>
@@ -53,30 +52,28 @@
                     <!-- This section lists the active workflows, one for each action type -->
                     <!-- example of card, content may vary.Can be used with for loops to make a list-->
                     {% for i in workflows_pub %}
-                    <div class="card p-4 my-1 shadow">
+                    <div style="border-radius: 0;" class="card pt-4 ps-4 pe-4 pb-3 my-2 shadow">
                         <div id="workflow_name" class=" ms-3 text-dark fw-bold">
                             {{ i['name'] }}
                         </div>
-                        <div class="card-body">
+                        <div class="card-body pt-2">
                             <!-- for action -->
                             {% if 'on_create' in i['data'].keys() %}
-                            <p id="workflow_action" class="text-dark">Appointment Created</p>
+                            <p id="workflow_action" class="text-dark mb-1">Appointment Created</p>
                             {% endif %}
 
                             {% if 'on_cancel' in i['data'].keys() %}
-                            <p id="workflow_action" class="text-dark">Appointment Cancelled</p>
+                            <p id="workflow_action" class="text-dark mb-1">Appointment Cancelled</p>
                             {% endif %}
 
                             {% if 'on_reschedule' in i['data'].keys() %}
-                            <p id="workflow_action" class="text-dark">Appointment Rescheduled</p>
+                            <p id="workflow_action" class="text-dark mb-1">Appointment Rescheduled</p>
                             {% endif %}
-
-
                             <!-- for date time it was created -->
-                            <p class="text-muted mb-3">Set at :<span id="workflow_setat"> {{ i['data']['set_on'] }}
+                            <p class="text-muted mb-2">Set at :<span id="workflow_setat"> {{ i['data']['set_on'] }}
                                 </span></p>
                             <!-- it will be fixed for this section -->
-                            <div class="badge rounded-pill bg-success mb-1">
+                            <div class="badge pill bg-success mb-1">
                                 Active
                             </div>
                             <br>
@@ -85,43 +82,73 @@
                     </div>
                     {% endfor %}
 
-
+                    <div style="border-radius: 0;" class="card pt-4 ps-4 pe-4 pb-3 my-1 shadow">
+                        <div id="workflow_name" class=" ms-3 text-dark fw-bold">
+                            GAY
+                        </div>
+                        <div class="card-body pt-2">
+                            <!-- for action -->
+                            <p id="workflow_action" class="text-dark mb-1">Appointment Rescheduled</p>
+                            <p class="text-muted mb-2">Set at :<span id="workflow_setat"> 6:30 AM
+                                </span></p>
+                            <!-- it will be fixed for this section -->
+                            <div class="badge pill bg-success mb-1">
+                                Active
+                            </div>
+                            <br>
+                            <a href="/editworkflow/published/{{ i['name'] }}" class="btn btns text-light">select</a>
+                        </div>
+                    </div>
+                    <div style="border-radius: 0;" class="card pt-4 ps-4 pe-4 pb-3 my-2 shadow">
+                        <div id="workflow_name" class=" ms-3 text-dark fw-bold">
+                            LESBIAN
+                        </div>
+                        <div class="card-body pt-2">
+                            <!-- for action -->
+                            <p id="workflow_action" class="text-dark mb-1">Appointment Rescheduled</p>
+                            <p class="text-muted mb-2">Set at :<span id="workflow_setat"> 6:30 AM
+                                </span></p>
+                            <!-- it will be fixed for this section -->
+                            <div class="badge pill bg-success mb-1">
+                                Active
+                            </div>
+                            <br>
+                            <a href="/editworkflow/published/{{ i['name'] }}" class="btn btns text-light">select</a>
+                        </div>
+                    </div>
 
                 </div>
                 <hr>
                 <!-- inactive -->
                 <h5 class="mt-5 ml-3 text-light">INACTIVE WORKFLOWS</h5>
-
-
                 <div id="inactive" class="col-md-12 mt-4 mb-5">
                     <!-- This section lists the inactive workflows, one for each action type -->
                     <!-- example of card, content may vary. Can be used with for loops to make a list-->
 
                     {% for i in workflows_draft %}
-                    <div class="card my-1 shadow">
-                        <div id="workflow_name" class="card-header">
+                    <div style="border-radius: 0;" class="card pt-4 ps-4 pe-4 pb-3 my-2 shadow">
+                        <div id="workflow_name" class=" ms-3 text-dark fw-bold">
                             {{ i['name'] }}
                         </div>
-                        <div class="card-body">
+                        <div class="card-body pt-2">
                             <!-- for action -->
                             {% if 'on_create' in i['data'].keys() %}
-                            <p id="workflow_action" class="card-text">Appointment Created</p>
+                            <p id="workflow_action" class="card-text mb-1">Appointment Created</p>
                             {% endif %}
 
                             {% if 'on_cancel' in i['data'].keys() %}
-                            <p id="workflow_action" class="card-text">Appointment Cancelled</p>
+                            <p id="workflow_action" class="card-text mb-1">Appointment Cancelled</p>
                             {% endif %}
 
                             {% if 'on_reschedule' in i['data'].keys() %}
-                            <p id="workflow_action" class="card-text">Appointment Rescheduled</p>
+                            <p id="workflow_action" class="card-text mb-1">Appointment Rescheduled</p>
                             {% endif %}
 
-
                             <!-- for date time it was created -->
-                            <p class="text-muted mb-3">Set at :<span id="workflow_setat"> {{ i['data']['set_on'] }}
+                            <p class="text-muted mb-2">Set at :<span id="workflow_setat"> {{ i['data']['set_on'] }}
                                 </span></p>
                             <!-- it will be fixed for this section -->
-                            <div class="badge rounded-pill bg-danger mb-1">
+                            <div class="badge pill bg-success mb-1">
                                 Inactive
                             </div>
                             <br>
