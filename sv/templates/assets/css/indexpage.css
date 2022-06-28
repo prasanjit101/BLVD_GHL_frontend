@@ -1,0 +1,72 @@
+/* import css*/
+@import "./styles.css";
+
+body {
+    background-color: var(--primary-color);
+    font-family: Blvd Pro, sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--primary-color);
+    text-align: center;
+}
+
+.ct {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    text-align: center;
+}
+
+.btns {
+    background-color: var(--accent);
+    color: black;
+    padding: 9px 14px;
+}
+
+a {
+    background-color: var(--accent);
+    color: #000;
+    font-family: Blvd Pro Mono, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: .1em;
+    transition: all .15s ease-in-out;
+}
+
+.shine {
+    position: relative;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: 90%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #747272;
+}
+
+h1 {
+    color: var(--secondary-color);
+    font-size: 2.8rem;
+}
+
+@keyframes animate {
+    0% {
+        background-position: -500%;
+    }
+
+    100% {
+        background-position: 500%;
+    }
+}
