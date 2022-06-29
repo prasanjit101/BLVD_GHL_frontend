@@ -52,7 +52,7 @@
                     <!-- This section lists the active workflows, one for each action type -->
                     <!-- example of card, content may vary.Can be used with for loops to make a list-->
                     {% for i in workflows_pub %}
-                    <div style="border-radius: 0;" class="card pt-4 ps-4 pe-4 pb-3 my-2 shadow">
+                    <div style="" class="card pt-4 ps-4 pe-4 pb-3 my-2 shadow">
                         <div id="workflow_name" class=" ms-3 text-dark fw-bold">
                             {{ i['name'] }}
                         </div>
@@ -82,40 +82,7 @@
                     </div>
                     {% endfor %}
 
-                    <div style="border-radius: 0;" class="card pt-4 ps-4 pe-4 pb-3 my-1 shadow">
-                        <div id="workflow_name" class=" ms-3 text-dark fw-bold">
-                            GAY
-                        </div>
-                        <div class="card-body pt-2">
-                            <!-- for action -->
-                            <p id="workflow_action" class="text-dark mb-1">Appointment Rescheduled</p>
-                            <p class="text-muted mb-2">Set at :<span id="workflow_setat"> 6:30 AM
-                                </span></p>
-                            <!-- it will be fixed for this section -->
-                            <div class="badge pill bg-success mb-1">
-                                Active
-                            </div>
-                            <br>
-                            <a href="/editworkflow/published/{{ i['name'] }}" class="btn btns text-light">select</a>
-                        </div>
-                    </div>
-                    <div style="border-radius: 0;" class="card pt-4 ps-4 pe-4 pb-3 my-2 shadow">
-                        <div id="workflow_name" class=" ms-3 text-dark fw-bold">
-                            LESBIAN
-                        </div>
-                        <div class="card-body pt-2">
-                            <!-- for action -->
-                            <p id="workflow_action" class="text-dark mb-1">Appointment Rescheduled</p>
-                            <p class="text-muted mb-2">Set at :<span id="workflow_setat"> 6:30 AM
-                                </span></p>
-                            <!-- it will be fixed for this section -->
-                            <div class="badge pill bg-success mb-1">
-                                Active
-                            </div>
-                            <br>
-                            <a href="/editworkflow/published/{{ i['name'] }}" class="btn btns text-light">select</a>
-                        </div>
-                    </div>
+
 
                 </div>
                 <hr>
@@ -126,7 +93,7 @@
                     <!-- example of card, content may vary. Can be used with for loops to make a list-->
 
                     {% for i in workflows_draft %}
-                    <div style="border-radius: 0;" class="card pt-4 ps-4 pe-4 pb-3 my-2 shadow">
+                    <div style="" class="card pt-4 ps-4 pe-4 pb-3 my-2 shadow">
                         <div id="workflow_name" class=" ms-3 text-dark fw-bold">
                             {{ i['name'] }}
                         </div>
@@ -148,7 +115,7 @@
                             <p class="text-muted mb-2">Set at :<span id="workflow_setat"> {{ i['data']['set_on'] }}
                                 </span></p>
                             <!-- it will be fixed for this section -->
-                            <div class="badge pill bg-success mb-1">
+                            <div class="badge pill bg-danger mb-1">
                                 Inactive
                             </div>
                             <br>

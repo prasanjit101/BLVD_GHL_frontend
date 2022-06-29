@@ -20,8 +20,8 @@ body {
 }
 
 .side-link:hover {
-    transform: scale(1.05);
-    transition-duration: 0.5s;
+    transform: scale(1.03);
+    transition-duration: 1s;
 }
 
 #sidebar {
@@ -38,7 +38,7 @@ body {
     margin-top: 10px;
     padding: 12px 16px;
     background-color: black;
-    color: #ceaa75;
+    color: #e1c397 !important;
     border-radius: 0;
     width: 156px;
 }
