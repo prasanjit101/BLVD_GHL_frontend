@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>New Workflows</title>
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="./assets/css/new.css">
+    <script src="https://cdn.tiny.cloud/1/si3attca1u3kry5evhyi2g9rsyjit7zrd1cuz0pdlgllan7x/tinymce/6/tinymce.min.js"
+        referrerpolicy="origin"></script>
+
+    <script src="./assets/js/tiny-initaliser.js"></script>
+</head>
+
+<body class="">
+    <div id="sidebar_triggers" class="shadow p-3">
+
+        <div class="list">
+            <div class="mt-5 pt-3 ms-3 mb-3">
+                <h5>Select your Trigger</h5>
+            </div>
+            <div class="my-1 border "><input value="Appointment Created" id="Appointment Created" name="on_create"
+                    onClick="trigger(this.value)" class="btn text-left text-start w-100 py-3 px-2" type="button"
+                    readonly>
+            </div>
+            <div class="my-1 border "><input value="Appointment Cancelled - Client Cancel"
+                    id="Appointment Cancelled: Client Cancel" name="on_client_cancel" onClick="trigger(this.value)"
+                    class="btn text-left text-start w-100 py-3 px-2" type="button" readonly>
+            </div>
+            <div class="my-1 border "><input value="Appointment Rescheduled" id="Appointment Rescheduled"
+                    name="on_reschedule" onClick="trigger(this.value)" class="btn text-left text-start w-100 py-3 px-2"
+                    type="button" readonly>
+            </div>
+            <div class="my-1 border "><input value="Appointment Cancelled - Client Late Cancel"
+                    id="Appointment Cancelled: Client Late Cancel" name="on_client_late_cancel"
+                    onClick="trigger(this.value)" class="btn text-left text-start w-100 py-3 px-2" type="button"
+                    readonly>
+            </div>
+            <div class="my-1 border "><input value="Appointment Cancelled - Client No Show"
+                    id="Appointment Cancelled: No Show" name="on_client_noshow" onClick="trigger(this.value)"
+                    class="btn text-left text-start w-100 py-3 px-2" type="button" readonly>
+            </div>
+            <button type="button" onclick="toggleSidebar(this)" class="btn btn-warning mt-3 border-dark py-2 px-3"
+                style="border-radius: 0;">Close</button>
+        </div>
+    </div>
+
+    <div id="sidebar_actions" class="shadow p-3">
+
+        <div class="list">
+            <div class="mt-5 pt-3 mb-3">
+                <h5>Select your Action</h5>
+            </div>
+            <div class="my-1 border "><input value="Send SMS" button id="SendSMS" onClick="trigger(this.value)"
+                    class="btn text-left text-start w-100 py-2 px-2" type="button" readonly>
+            </div>
+            <div class="my-1 border "><input value="Send Email" button id="SendEMAIL" onClick="trigger(this.value)"
+                    class="btn text-left text-start w-100 py-2 px-2" type="button" readonly>
+            </div>
+            <div class="my-1 border "><input value="Add tag" button id="ADDTAG" onClick="trigger(this.value)"
+                    class="btn text-left text-start w-100 py-2 px-2" type="button" readonly>
+            </div>
+            <div class="my-1 border "><input value="Remove Tag" button id="REMOVETAG" onClick="trigger(this.value)"
+                    class="btn text-left text-start w-100 py-2 px-2" type="button" readonly>
+            </div>
+            <button type="button" onclick="toggleSidebarActions(this,2)"
+                class="btn btn-warning mt-3 border-dark py-2 px-3" style="border-radius: 0;">Close</button>
+        </div>
+    </div>
+    <div class="container-fluid m-0 p-0">
+        <nav class="navbar navbar-dark bg-dark" aria-label="First navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">Home</a>
+            </div>
+        </nav>
+
+        <main>
+            <div id="filled">
+                <!-- cretae sidebar toggle button -->
+                <form id="workflow-form" name="workflow-form" method="post" class="mt-5">
+                    <div class="d-flex flex-column w-100" id="workflow_list">
+                        <input class="vertical form-contro mx-auto w-25 p-3 text-center
+                        " type="text" placeholder="Enter the name of the workflow" name="create_name"
+                            aria-describedby="basic-addon1" id="create_name" required>
+
+                        <!-- add button -->
+                        <div class="mx-auto">
+                            <div id="add1" class="btn-group dropend w-50 mx-auto">
+                                <button type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                    style="height: 34px;width: 34px; border: none;margin-left: 9px; background-color: white;"
+                                    class="mx-auto my-2 dropdown-toggle"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="32" height="32" fill="currentColor" class="bi bi-plus-circle"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                        <path
+                                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                    </svg></button>
+
+                                <ul class="dropdown-menu p-0" style="border: 1px solid black ;">
+                                    <li><input id="add_trigger" type="button" onclick="toggleSidebar(this,2)"
+                                            style="border: none; background-color: #fff;"
+                                            class="form-control bg-light trigger-btn text-center mx-auto p-3"
+                                            placeholder="Add trigger" type="text" value="Add Trigger"
+                                            aria-label="Disabled input" readonly></li>
+                                    <li><input id="remove" type="button" onclick="remove_t()"
+                                            style="border: none; background-color: #fff;"
+                                            class="form-control bg-light trigger-btn text-center mx-auto p-3"
+                                            placeholder="Remove trigger" type="text" value="Remove trigger"
+                                            aria-label="Disabled input" readonly></li>
+                                    <!-- <li><input id="add_action" type="button" onclick="toggleSidebarActions(this)"
+                                            style="border: none; background-color: #fff;"
+                                            class="form-control bg-light trigger-btn text-center mx-auto p-3 mt-1"
+                                            placeholder="Add Action" type="text" value="Add Action"
+                                            aria-label="Disabled input" readonly></li>
+                                    <li><input id="end" type="button" onclick="End(this)"
+                                            style="border: none; background-color: #fff;"
+                                            class="form-control bg-light trigger-btn text-center mx-auto p-3 mt-1"
+                                            placeholder="End" type="text" value="End" aria-label="Disabled input" readonly>
+                                    </li> -->
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Trigger box -->
+                        <div id="triggers" style="display: none ;">
+                            <div class="w-50 p-3 shadow mx-auto my-2 trigger-pane">
+                                <p class="">Trigger</p>
+                                <input type="text" class="py-4 px-auto" value="" name="trigger" id="trigger" readonly>
+                            </div>
+                        </div>
+                        <!-- add button -->
+                        <div class="mx-auto">
+                            <div style="display: none;" id="add2" class="btn-group dropend  w-50">
+                                <button type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                    style="height: 34px;width: 34px; border: none; background-color: white;"
+                                    class="mx-auto my-2 dropdown-toggle"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="32" height="32" fill="currentColor" class="bi bi-plus-circle"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                        <path
+                                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                    </svg></button>
+
+                                <ul class="dropdown-menu p-0" style="border: 1px solid black ;">
+                                    <li><input id="add_action" type="button" onclick="toggleSidebarActions(this)"
+                                            style="border: none; background-color: #fff;"
+                                            class="form-control bg-light trigger-btn text-center mx-auto p-3 mt-1"
+                                            placeholder="Add Action" type="text" value="Add Action"
+                                            aria-label="Disabled input" readonly></li>
+                                    <li><input id="remove" type="button" onclick="remove_a()"
+                                            style="border: none; background-color: #fff;"
+                                            class="form-control bg-light trigger-btn text-center mx-auto p-3"
+                                            placeholder="Remove action" type="text" value="Remove action"
+                                            aria-label="Disabled input" readonly></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Actions box -->
+                        <div id="action-list">
+
+                        </div>
+                        <!-- End button -->
+
+                        <div id="finish" class="mx-auto">
+                            <div class="d-flex justify-content-center mt-5">
+                                <button type="button" class="btn btn-warning px-4 py-3 mx-1" style="width: 150px ;"
+                                    name="publish" id="btn-draft" onclick="return CreateDraft();">Publish</button>
+                                <button type="button" class="btn btn-warning px-4 py-3 mx-1" style="width: 150px ;"
+                                    name="button" id="btn-publish" onclick="return CreatePublished();">Draft</button>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </form>
+            </div>
+        </main>
+        <div class="sidebar is-visible">
+            <p class="sidebar-content">
+            </p>
+        </div>
+    </div>
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/js/theme.js"></script>
+    <script src="./assets/js/new.js"></script>
+    <script type=text/javascript>
+        function CreatePublished() {
+          var workflowName = document.getElementById("create_name").value;
+          document.getElementById('workflow-form').action = `/create/publish/${workflowName}`;
+          //document.getElementById('workflow-form').method  = "post";    
+        }
+
+        function CreateDraft() {
+          var workflowName = document.getElementById("create_name").value;
+          document.getElementById('workflow-form').action = `/create/draft/${workflowName}`;
+          //document.getElementById('workflow-form').method  = "post";    
+        }
+
+        </script>
+
+</body>
+
+</html>

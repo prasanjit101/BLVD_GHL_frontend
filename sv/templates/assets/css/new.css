@@ -1,7 +1,0 @@
-/* import css*/
-@import "./styles.css";
-
-textarea {
-    resize: vertical;
-    min-height: 235px !important;
-}

@@ -27,9 +27,10 @@
 }
 
 #sidebar_triggers {
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 0px;
+    z-index: 999;
     width: 517px;
     height: 100%;
     background: white;
@@ -67,11 +68,12 @@
 
 
 #sidebar_actions {
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 0px;
     min-width: 500px;
     height: 100%;
+    z-index: 999;
     background: white;
     color: #000;
     transition: all 300ms linear;
@@ -114,7 +116,7 @@
     border-radius: 5px;
     text-align: center;
     padding: 5px;
-    width: 650px;
+    width: 700px;
     height: 35px;
     margin-bottom: 10px;
 }
